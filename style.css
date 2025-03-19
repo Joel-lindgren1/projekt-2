@@ -1,42 +1,69 @@
-body{
-display: grid;
 
+
+
+
+
+
+
+
+
+
+body {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* Two columns: 75% for .prod, 25% for .varukorg */
+    grid-template-rows: 1fr 1fr 1fr; /* Three rows of equal height */
+    background-color: #FF00B2;
 }
 
-.prod{
-display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr;
-grid-template-rows: 1fr 1fr;
+.prod {
+    grid-column: 1; /* Place .prod in the first column */
+    grid-row: 2; /* Place .prod in the second row */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+    border: solid 5px black;
+    border-radius: 25px;
+    background-color: #FF36FC;
+    padding-bottom: 1%;
+    width: 90%; /* Use full width of the grid cell */
+}
+
+.varukorg {
+    grid-column: 2 ; 
+    grid-row: 2 ; 
+    text-align: center;
+    background-color: #FF36FC;
+    border: solid 5px black;
+    border-radius:25px ;
+}
+
+img {
+    max-width: 25%;
+    align-content: center;
+}
+
+button {
+    font-size: 12px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+}
+
+.highlight {
+    background-color: #555555;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+header{
 text-align: center;
-border: solid 5px black;
-border-radius: 25px;
-background-color: #FF36FC;
-padding-bottom: 1%;
-width: 100%;
-}
-img{
-max-width: 25%;
-align-content: center;
+line-height: 75px;
 }
 
-button{
-font-size: 12px;
-padding: 8px 12px;
-border-radius: 12px;
-transition-duration: 0.4s;
-}
-
-.highlight{
-background-color: #555555;
-color: white;
-box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-} 
-
-.varukorg{
-text-align: right;
-
-}
-#produkter{
-text-align: center;
-
+.liam{
+background-image: url(img/WIN_20250318_09_30_27_Pro.webp);
+border: solid black;
+border-radius: 10px;
+margin-bottom: 10px;
 }
